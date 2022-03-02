@@ -1,17 +1,17 @@
-import {Injectable, Optional, SkipSelf} from '@angular/core';
+import {Injectable} from '@angular/core';
 
 @Injectable({providedIn: 'root'})
 export class GreatService {
+    private static NUMBER_OF_INSTANCES = 0;
+    private INSTANCE_ID = Math.floor(Math.random() * (3000));
 
-    constructor(@Optional() @SkipSelf() parentService: GreatService) {
-        if (!!parentService) {
-            throw new Error('GreatService should be singleton but there was a try of creating another instance.')
-        }
+    constructor() {
+        GreatService.NUMBER_OF_INSTANCES++;
+        console.log('GreatService', GreatService.NUMBER_OF_INSTANCES, this.INSTANCE_ID);
     }
 
     doSomethingGreat(): void {
-        console.log('I\'m doing something really great :-)');
+        console.log('I\'m doing something really great :-)', GreatService.NUMBER_OF_INSTANCES, this.INSTANCE_ID);
     }
 }
-
 

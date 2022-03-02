@@ -6,8 +6,7 @@ import {I18nHelper} from '@app/core';
 import {ConfigurationHelper} from '@app/configuration';
 import {HttpClient} from '@angular/common/http';
 import {RouterModule} from '@angular/router';
-import {FeatureOneService} from './feature-one.serice';
-import {GreatService} from '../../services';
+import {FeatureOneService} from './feature-one.service';
 
 
 @NgModule({

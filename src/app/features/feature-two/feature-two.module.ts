@@ -7,8 +7,6 @@ import {HttpClient} from '@angular/common/http';
 import {ConfigurationHelper} from '@app/configuration';
 import {CommonModule} from '@app/shared';
 import {RouterModule} from '@angular/router';
-import {GreatService} from '../../services';
-
 
 @NgModule({
     declarations: [

@@ -8,10 +8,11 @@ import {GreatService} from '../../services';
 })
 export class FeatureTwoComponent implements OnInit {
 
-    constructor(readonly greatService: GreatService,) {
+    constructor(readonly greatService: GreatService) {
     }
 
     ngOnInit(): void {
         this.greatService.doSomethingGreat();
     }
+
 }
