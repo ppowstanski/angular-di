@@ -9,31 +9,31 @@ import {CommonModule} from '@app/shared';
 import {FormsModule} from '@angular/forms';
 
 @NgModule({
-  declarations: [
-    MainComponent
-  ],
-  exports: [
-    MainComponent
-  ],
-  imports: [
-    CommonModule,
-    MainRoutingModule,
-    TranslateModule.forRoot({
-      loader: {
-        provide: TranslateLoader,
-        useFactory: I18nHelper.createTranslateHttpLoader(ConfigurationHelper.MainModule),
-        deps: [HttpClient]
-      },
-      isolate: true
-    }),
-    FormsModule
-  ]
+    declarations: [
+        MainComponent
+    ],
+    exports: [
+        MainComponent
+    ],
+    imports: [
+        CommonModule,
+        MainRoutingModule,
+        TranslateModule.forRoot({
+            loader: {
+                provide: TranslateLoader,
+                useFactory: I18nHelper.createTranslateHttpLoader(ConfigurationHelper.MainModule),
+                deps: [HttpClient]
+            },
+            isolate: true
+        }),
+        FormsModule
+    ]
 })
 export class MainModule {
-  constructor(@Optional() @SkipSelf() parentModule: MainModule, translateService: TranslateService) {
-    if (!!parentModule) {
-      throw new Error('MainModule is already loaded. Please import it only in AppModule');
+    constructor(@Optional() @SkipSelf() parentModule: MainModule, translateService: TranslateService) {
+        if (!!parentModule) {
+            throw new Error('MainModule is already loaded. Please import it only in AppModule');
+        }
+        I18nHelper.registerTranslateService(translateService);
     }
-    I18nHelper.registerTranslateService(translateService);
-  }
 }

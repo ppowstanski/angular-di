@@ -7,32 +7,35 @@ import {HttpClient} from '@angular/common/http';
 import {ConfigurationHelper} from '@app/configuration';
 import {CommonModule} from '@app/shared';
 import {RouterModule} from '@angular/router';
+import {GreatService} from '../../services';
 
 
 @NgModule({
-  declarations: [
-    FeatureTwoComponent
-  ],
-  imports: [
-    CommonModule,
-    TranslateModule.forRoot({
-      loader: {
-        provide: TranslateLoader,
-        useFactory: I18nHelper.createTranslateHttpLoader(ConfigurationHelper.FeatureTwo),
-        deps: [HttpClient]
-      },
-      isolate: true
-    }),
-    RouterModule.forChild([
-      {
-        path: '',
-        component: FeatureTwoComponent
-      }
-    ])
-  ]
+    declarations: [
+        FeatureTwoComponent
+    ],
+    imports: [
+        CommonModule,
+        TranslateModule.forRoot({
+            loader: {
+                provide: TranslateLoader,
+                useFactory: I18nHelper.createTranslateHttpLoader(ConfigurationHelper.FeatureTwo),
+                deps: [HttpClient]
+            },
+            isolate: true
+        }),
+        RouterModule.forChild([
+            {
+                path: '',
+                component: FeatureTwoComponent
+            }
+        ])
+    ],
+    providers: [
+    ]
 })
 export class FeatureTwoModule {
-  constructor(translateService: TranslateService) {
-    I18nHelper.registerTranslateService(translateService);
-  }
+    constructor(translateService: TranslateService) {
+        I18nHelper.registerTranslateService(translateService);
+    }
 }
