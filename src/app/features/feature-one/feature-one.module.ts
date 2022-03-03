@@ -8,7 +8,6 @@ import {HttpClient} from '@angular/common/http';
 import {RouterModule} from '@angular/router';
 import {FeatureOneService} from './feature-one.service';
 
-
 @NgModule({
     declarations: [
         FeatureOneComponent

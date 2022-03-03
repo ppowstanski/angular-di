@@ -2,7 +2,6 @@ import {Component, OnInit} from '@angular/core';
 import {ConfigurationHelper} from '@app/configuration';
 import {I18nHelper} from '@app/core';
 import {AppLanguage} from '../core/i18n';
-import {GreatService} from '../services';
 
 @Component({
     selector: 'app-main',
@@ -11,8 +10,6 @@ import {GreatService} from '../services';
 })
 export class MainComponent implements OnInit {
 
-    constructor() {
-    }
     get featureOnePath(): string {
         return ConfigurationHelper.FeatureOne
     }

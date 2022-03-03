@@ -7,7 +7,6 @@ import {ConfigurationHelper} from '@app/configuration';
 import {HttpClient} from '@angular/common/http';
 import {CommonModule} from '@app/shared';
 import {FormsModule} from '@angular/forms';
-import {GreatService} from '../services';
 
 @NgModule({
     declarations: [
@@ -30,7 +29,6 @@ import {GreatService} from '../services';
         FormsModule
     ],
     providers: [
-        GreatService
     ]
 })
 export class MainModule {

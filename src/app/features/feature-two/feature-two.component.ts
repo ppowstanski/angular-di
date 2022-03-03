@@ -14,5 +14,4 @@ export class FeatureTwoComponent implements OnInit {
     ngOnInit(): void {
         this.greatService.doSomethingGreat();
     }
-
 }
