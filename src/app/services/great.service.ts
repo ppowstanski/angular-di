@@ -7,11 +7,10 @@ export class GreatService {
 
     constructor() {
         GreatService.NUMBER_OF_INSTANCES++;
-        console.log('GreatService ', GreatService.NUMBER_OF_INSTANCES, this.INSTANCE_ID);
+        console.log(`GreatService created [InstanceID=${this.INSTANCE_ID}, Number of instances=${GreatService.NUMBER_OF_INSTANCES}]`);
     }
 
     doSomethingGreat(): void {
-        console.log('I\'m doing something really great :-)', this.INSTANCE_ID);
+        console.log(`GreatService does something great [InstanceID=${this.INSTANCE_ID}]`);
     }
 }
-
