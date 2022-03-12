@@ -1,1 +1,1 @@
-export * from './great.service';
+export * from './mining.service';

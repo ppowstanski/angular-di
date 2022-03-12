@@ -7,6 +7,8 @@ import {ConfigurationHelper} from '@app/configuration';
 import {HttpClient} from '@angular/common/http';
 import {CommonModule} from '@app/shared';
 import {FormsModule} from '@angular/forms';
+import {MiningService} from '../services';
+import {DiamondService} from '../services/diamond.service';
 
 @NgModule({
     declarations: [
@@ -29,6 +31,10 @@ import {FormsModule} from '@angular/forms';
         FormsModule
     ],
     providers: [
+        {
+            provide: MiningService,
+            useClass: DiamondService
+        }
     ]
 })
 export class MainModule {

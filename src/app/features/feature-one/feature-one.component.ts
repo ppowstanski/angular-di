@@ -1,5 +1,5 @@
-import {Component, OnInit} from '@angular/core';
-import {GreatService} from '../../services/great.service';
+import {Component, OnInit, Optional} from '@angular/core';
+import {MiningService} from '../../services/mining.service';
 
 @Component({
     selector: 'app-feature-one',
@@ -8,10 +8,10 @@ import {GreatService} from '../../services/great.service';
 })
 export class FeatureOneComponent implements OnInit {
 
-    constructor(readonly greatService: GreatService) {
+    constructor(readonly miningService: MiningService) {
     }
 
     ngOnInit(): void {
-        this.greatService.doSomethingGreat();
+        this.miningService.mine();
     }
 }
