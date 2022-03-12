@@ -30,7 +30,6 @@ import {FeatureOneService} from './feature-one.service';
         ])
     ],
     providers: [
-        FeatureOneService
     ]
 })
 export class FeatureOneModule {

@@ -1,6 +1,5 @@
 import {Component, OnInit} from '@angular/core';
 import {GreatService} from '../../services/great.service';
-import {FeatureOneService} from './feature-one.service';
 
 @Component({
     selector: 'app-feature-one',
@@ -9,12 +8,10 @@ import {FeatureOneService} from './feature-one.service';
 })
 export class FeatureOneComponent implements OnInit {
 
-    constructor(readonly greatService: GreatService,
-                readonly containerService: FeatureOneService) {
+    constructor(readonly greatService: GreatService) {
     }
 
     ngOnInit(): void {
         this.greatService.doSomethingGreat();
-        this.containerService.log('ngOnInit in FeatureOneComponent');
     }
 }

@@ -1,6 +1,6 @@
 import {Injectable} from '@angular/core';
 
-@Injectable({providedIn: 'root'})
+@Injectable()
 export class GreatService {
     private static NUMBER_OF_INSTANCES = 0;
     private INSTANCE_ID = Math.floor(Math.random() * (3000));
