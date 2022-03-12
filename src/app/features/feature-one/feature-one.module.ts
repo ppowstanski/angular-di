@@ -7,10 +7,16 @@ import {ConfigurationHelper} from '@app/configuration';
 import {HttpClient} from '@angular/common/http';
 import {RouterModule} from '@angular/router';
 import {FeatureOneService} from './feature-one.service';
+import { FeatureOneChildComponent } from './feature-one-child/feature-one-child.component';
+import { MiningDirective } from './mining.directive';
+import {MiningService} from '../../services';
+import {DiamondService} from '../../services/diamond.service';
 
 @NgModule({
     declarations: [
-        FeatureOneComponent
+        FeatureOneComponent,
+        FeatureOneChildComponent,
+        MiningDirective
     ],
     imports: [
         CommonModule,
@@ -30,6 +36,10 @@ import {FeatureOneService} from './feature-one.service';
         ])
     ],
     providers: [
+        {
+            provide: MiningService,
+            useClass: DiamondService
+        }
     ]
 })
 export class FeatureOneModule {

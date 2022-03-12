@@ -1,4 +1,4 @@
-import {Component, OnInit, Self, SkipSelf} from '@angular/core';
+import {Component} from '@angular/core';
 import {MiningService} from '../../services/mining.service';
 import {CarbonService} from '../../services/carbon.service';
 
@@ -13,12 +13,5 @@ import {CarbonService} from '../../services/carbon.service';
         }
     ]
 })
-export class FeatureOneComponent implements OnInit {
-
-    constructor(@SkipSelf() readonly miningService: MiningService) {
-    }
-
-    ngOnInit(): void {
-        this.miningService.mine();
-    }
+export class FeatureOneComponent {
 }
